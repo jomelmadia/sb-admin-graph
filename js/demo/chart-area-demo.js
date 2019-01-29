@@ -1,54 +1,231 @@
-// Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#292b2c';
 
-// Area Chart Example
-var ctx = document.getElementById("tempChart");
-var myLineChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
-    datasets: [{
-      label: "Sessions",
-      lineTension: 0.3,
-      backgroundColor: "rgba(2,117,216,0.2)",
-      borderColor: "rgba(2,117,216,1)",
-      pointRadius: 5,
-      pointBackgroundColor: "rgba(2,117,216,1)",
-      pointBorderColor: "rgba(255,255,255,0.8)",
-      // pointHoverRadius: 5,
-      // pointHoverBackgroundColor: "rgba(2,117,216,1)",
-      // pointHitRadius: 50,
-      // pointBorderWidth: 2,
-      data: [23, 12, 14, 37, 23, 12, 14, 37, 7, 12, 56, 3, 98,],
-    }],
-  },
-  options: {
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'date'
-        },
-        gridLines: {
-          display: false
-        },
-        ticks: {
-          maxTicksLimit: 7
-        }
-      }],
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 100,
-          maxTicksLimit: 5
-        },
-        gridLines: {
-          color: "rgba(0, 0, 0, .125)",
-        }
+d3.csv("data_pi.csv").then(response => {
+  console.log(response) // [{"Hello": "world"}
+  var x = []
+  var total = 0  
+
+  response.forEach(myFuntion)
+  function myFuntion(value) {
+    x.push(value.temperature)
+  }
+
+  var val = x.length
+  console.log(val)
+  var y = Array(val).fill("x")
+
+  var ctx = document.getElementById("tempChart");
+  var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: y,
+      datasets: [{
+        label: "Temperature",
+        data: x
       }],
     },
-    legend: {
-      display: false
+    options: {
+      scales: {
+        xAxes: [{
+          time: {
+            unit: 'date'
+          },
+          gridLines: {
+            display: true
+          },
+          ticks: {
+            maxTicksLimit: 7
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            min: 0,
+            max: 100,
+            maxTicksLimit: 5
+          },
+          gridLines: {
+            color: "rgba(0, 0, 0, .125)",
+          }
+        }],
+      },
+      legend: {
+        display: false
+      }
     }
+  })
+})
+.catch(response => {
+})
+
+d3.csv("data_pi.csv").then(response => {
+  console.log(response) // [{"Hello": "world"}
+  var x = []
+  var total = 0  
+
+  response.forEach(myFuntion)
+  function myFuntion(value) {
+    x.push(value.concentration)
   }
-});
+
+  var val = x.length
+  console.log(val)
+  var y = Array(val).fill("x")
+
+  var ctx = document.getElementById("concentration");
+  var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: y,
+      datasets: [{
+        label: "Temperature",
+        data: x
+      }],
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          time: {
+            unit: 'date'
+          },
+          gridLines: {
+            display: true
+          },
+          ticks: {
+            maxTicksLimit: 7
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            min: 0,
+            max: 50,
+            maxTicksLimit: 5
+          },
+          gridLines: {
+            color: "rgba(0, 0, 0, .125)",
+          }
+        }],
+      },
+      legend: {
+        display: false
+      }
+    }
+  })
+})
+.catch(response => {
+})
+
+
+d3.csv("data_pi.csv").then(response => {
+  console.log(response) // [{"Hello": "world"}
+  var x = []
+  var total = 0  
+
+  response.forEach(myFuntion)
+  function myFuntion(value) {
+    x.push(value.pressure)
+  }
+
+  var val = x.length
+  console.log(val)
+  var y = Array(val).fill("x")
+
+  var ctx = document.getElementById("pressure");
+  var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: y,
+      datasets: [{
+        label: "Temperature",
+        data: x
+      }],
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          time: {
+            unit: 'date'
+          },
+          gridLines: {
+            display: true
+          },
+          ticks: {
+            maxTicksLimit: 7
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            min: 0,
+            max: 100,
+            maxTicksLimit: 5
+          },
+          gridLines: {
+            color: "rgba(0, 0, 0, .125)",
+          }
+        }],
+      },
+      legend: {
+        display: false
+      }
+    }
+  })
+})
+.catch(response => {
+})
+
+d3.csv("data_pi.csv").then(response => {
+  console.log(response) // [{"Hello": "world"}
+  var x = []
+  var total = 0  
+
+  response.forEach(myFuntion)
+  function myFuntion(value) {
+    x.push(value.pH_Level)
+  }
+
+  var val = x.length
+  console.log(val)
+  var y = Array(val).fill("x")
+
+  var ctx = document.getElementById("ph_level");
+  var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: y,
+      datasets: [{
+        label: "Temperature",
+        data: x
+      }],
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          time: {
+            unit: 'date'
+          },
+          gridLines: {
+            display: true
+          },
+          ticks: {
+            maxTicksLimit: 1
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            min: 0,
+            max: 14,
+            maxTicksLimit: 5
+          },
+          gridLines: {
+            color: "rgba(0, 0, 0, .125)",
+          }
+        }],
+      },
+      legend: {
+        display: false
+      }
+    }
+  })
+})
+.catch(response => {
+})
