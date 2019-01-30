@@ -13,7 +13,6 @@ d3.csv("data_pi.csv").then(response => {
 
   var val = x.length
   var y = Array(val).fill("x")
-
   var ctx = document.getElementById("tempChart");
   var myLineChart = new Chart(ctx, {
     type: 'line',
@@ -68,7 +67,6 @@ d3.csv("data_pi.csv").then(response => {
 
   var val = x.length
   var y = Array(val).fill("x")
-
   var ctx = document.getElementById("concentration");
   var myLineChart = new Chart(ctx, {
     type: 'line',
@@ -124,7 +122,6 @@ d3.csv("data_pi.csv").then(response => {
 
   var val = x.length
   var y = Array(val).fill("x")
-
   var ctx = document.getElementById("pressure");
   var myLineChart = new Chart(ctx, {
     type: 'line',
@@ -179,7 +176,6 @@ d3.csv("data_pi.csv").then(response => {
 
   var val = x.length
   var y = Array(val).fill("x")
-
   var ctx = document.getElementById("ph_level");
   var myLineChart = new Chart(ctx, {
     type: 'line',
