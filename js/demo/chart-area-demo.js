@@ -1,8 +1,8 @@
 Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#292b2c';
 
+
 d3.csv("data_pi.csv").then(response => {
-  console.log(response) // [{"Hello": "world"}
   var x = []
   var total = 0  
 
@@ -59,7 +59,6 @@ d3.csv("data_pi.csv").then(response => {
 })
 
 d3.csv("data_pi.csv").then(response => {
-  console.log(response) // [{"Hello": "world"}
   var x = []
   var total = 0  
 
@@ -117,7 +116,6 @@ d3.csv("data_pi.csv").then(response => {
 
 
 d3.csv("data_pi.csv").then(response => {
-  console.log(response) // [{"Hello": "world"}
   var x = []
   var total = 0  
 
@@ -174,7 +172,6 @@ d3.csv("data_pi.csv").then(response => {
 })
 
 d3.csv("data_pi.csv").then(response => {
-  console.log(response) // [{"Hello": "world"}
   var x = []
   var total = 0  
 
