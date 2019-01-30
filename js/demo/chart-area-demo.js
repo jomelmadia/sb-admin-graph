@@ -12,7 +12,6 @@ d3.csv("data_pi.csv").then(response => {
   }
 
   var val = x.length
-  console.log(val)
   var y = Array(val).fill("x")
 
   var ctx = document.getElementById("tempChart");
@@ -68,7 +67,6 @@ d3.csv("data_pi.csv").then(response => {
   }
 
   var val = x.length
-  console.log(val)
   var y = Array(val).fill("x")
 
   var ctx = document.getElementById("concentration");
@@ -125,7 +123,6 @@ d3.csv("data_pi.csv").then(response => {
   }
 
   var val = x.length
-  console.log(val)
   var y = Array(val).fill("x")
 
   var ctx = document.getElementById("pressure");
@@ -181,7 +178,6 @@ d3.csv("data_pi.csv").then(response => {
   }
 
   var val = x.length
-  console.log(val)
   var y = Array(val).fill("x")
 
   var ctx = document.getElementById("ph_level");
